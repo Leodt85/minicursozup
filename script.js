@@ -16,7 +16,8 @@ traduzirCondicao = (data) => {
 
 gerarValorAletorio = () => {
     return Math.floor(Math.random() * 671);
-}
+    }
+    
 
 pegarPersonagem = () => {
     let numeroAleatorio = gerarValorAletorio();
@@ -26,13 +27,18 @@ pegarPersonagem = () => {
             Accept: 'application/json',
             "Content-type": 'application/json'
         }
+
+        
     }).then((response) => response.json()).then((data) => {
         imagem.src = data.image;
         imagem.alt = data.name;
         nomeDoPersonagem.innerHTML = data.name;
         especie.innerHTML = data.species;
         condicao.innerHTML = traduzirCondicao(data);
+
     });
-}
+
+   }
 
 botao.onclick = pegarPersonagem;
+
