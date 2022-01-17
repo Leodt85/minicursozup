@@ -18,7 +18,7 @@ chamarApi = (numeroAleatorio) => {
         }
     });
 }
-atualizarTela = () => {
+VerConhecerPersonagem = () => {
     pegarPersonagemChamarApiAlterarDadosImagem(1);
     pegarPersonagemChamarApiAlterarDadosImagem(2);
     pegarPersonagemChamarApiAlterarDadosImagem(3);
